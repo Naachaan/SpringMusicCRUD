@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/insert.css" rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>PlayList</h2>
+<form th:action="@{/check}" method="post">
+<div>
+title song:<span th:text="${musicForm.song_name}"></span><br>
+singer:<span th:text="${musicForm.singer}"></span><br>
+<input type="hidden" name="song_id" th:value="${musicForm.song_id}">
+<input type="hidden" name="song_name" th:value="${musicForm.song_name}">
+<input type="hidden" name="singer" th:value="${musicForm.singer}">
+<input type="submit" value="登録" name="insert">
+<input type="submit" value="戻る" name="return">
+</div>
+</form>
+</body>
+</html>

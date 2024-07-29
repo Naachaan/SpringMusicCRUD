@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/delete.css" rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>PlayList</h2>
+<div>
+<form th:action="@{/delete}" method="post">
+    ID:[[${music.song_id}]]<br>
+    title song:[[${music.song_name}]]<br>
+    artist:[[${music.singer}]]<br>
+    <input type="hidden" name="song_id" th:value="${music.song_id}">
+	<input type="hidden" name="song_name" th:value="${music.song_name}">
+	<input type="hidden" name="singer" th:value="${music.singer}">
+    <input type="submit" value="削除" name="delete">
+    <input type="submit" value="戻る" name="return">
+</form>
+</div>
+</body>
+</html>

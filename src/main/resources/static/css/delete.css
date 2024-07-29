@@ -1,0 +1,63 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	width:100%;
+	min-height:100vh;
+	background: linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%,
+	 			rgba(151, 217, 225, 0.7) 100%),
+	 		    url(/images/siba.png);
+}
+h2{
+	top:0px;
+	width:100%;
+	height:30px;
+	background-color: rgba(245, 208, 245, 0.7);
+	margin-top:0;
+}
+p{
+	font-size:12px;
+	margin:0;
+}
+div{
+	text-align: center;
+}
+div ul li{
+	list-style: none;
+	display: inline-block;
+	width: 18%;
+	min-width: 90px;
+}
+div ul li input{
+	border:none;
+	background-color: transparent;
+	font-weight:bold;
+	color: rgba(223, 124, 223, 0.7);
+}
+div ul li input:hover{
+	color:#fff;
+	border-bottom:2px solid #fff;
+}
+.table{
+	width:100%;
+	display:flex;
+	justify-content: center;
+}
+table{
+	overflow: auto;
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table .title{
+	font-weight:bold;
+	border-bottom: solid 5px #778ca3;
+}
+table th{
+	padding: 10px;
+    border-bottom: solid 4px #778ca3;
+    color: #778ca3;
+}
+table td{
+	padding: 10px;
+    border-bottom: solid 1px #778ca3;
+}

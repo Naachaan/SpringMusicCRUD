@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/index.css" rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>PlayList</h2>
+<form th:action="@{/music}" method="POST">
+<div>
+<ul>
+<li><input type="submit" value="登録" name="insert"></li>
+<li><input type="submit" value="更新" name="update"></li>
+<li><input type="submit" value="削除" name="delete"></li>
+</ul>
+</div>
+</form>
+<div class="table">
+<table>
+<tr class="title">
+<td></td>
+<td>Title Song</td>
+<td>Artist</td>
+</tr>
+<tr th:each="music:${list}">
+<td th:text="${music.song_id}"></td>
+<td th:text="${music.song_name}"></td>
+<td th:text="${music.singer}"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
